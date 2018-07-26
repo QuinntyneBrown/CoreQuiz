@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\..\src\CoreQuiz.API\CoreQuiz.API.csproj" />
     <ProjectReference Include="..\..\src\CoreQuiz.Core\CoreQuiz.Core.csproj" />
     <ProjectReference Include="..\..\src\CoreQuiz.Infrastructure\CoreQuiz.Infrastructure.csproj" />
   </ItemGroup>

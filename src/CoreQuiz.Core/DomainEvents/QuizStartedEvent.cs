@@ -1,11 +1,12 @@
 using CoreQuiz.Core.Models;
 using MediatR;
+using System;
 
 namespace CoreQuiz.Core.DomainEvents
 {
     public class QuizStartedEvent: INotification
     {
-        public int QuizId { get; set; }
+        public Guid QuizId { get; set; }
         public Quiz Quiz { get; set; }
     }
 }

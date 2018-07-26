@@ -1,14 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CoreQuiz.Core.DomainEvents
 {
     public class QuestionAnsweredEvent
     {
-        public int QuizResultId { get; set; }
-        public int QuestionId { get; set; }
-        public int UserId { get; set; }
-        public int OptionId { get; set; }
+        public Guid QuizResultId { get; set; }
+        public Guid QuestionId { get; set; }
+        public Guid UserId { get; set; }
+        public Guid OptionId { get; set; }
     }
 }

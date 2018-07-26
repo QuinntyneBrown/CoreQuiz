@@ -1,13 +1,16 @@
 using CoreQuiz.Core.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
 namespace CoreQuiz.Core.Interfaces
 {
-    public interface IAppDbContext
+    public interface IAppDbContext: IDisposable
     {
-        DbSet<DomainEvent> DomainEvents { get; set; }
-        Task<int> SaveChangesAsync(CancellationToken cancellationToken);
+        DbSet<StoredEvent> StoredEvents { get; set; }                 
+        int SaveChanges();
+
+        Task<int> SaveChangesAsync(CancellationToken cancellationToken = default(CancellationToken));
     }
 }
